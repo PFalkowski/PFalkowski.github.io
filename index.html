@@ -99,7 +99,6 @@
             margin-bottom: 0;
         }
 
-        /* Skill bar styles */
         .skill {
             display: flex;
             align-items: center;
@@ -128,7 +127,20 @@
         .skill span {
             min-width: 50px;
             text-align: right;
+			flex-shrink: 0;
         }
+		
+		.skill span:first-child {
+			min-width: 120px; /* Ensures the skill name has a consistent width */
+			text-align: left;
+		}
+
+		.skill span:last-child {
+			min-width: 70px; /* Ensures the years text has a consistent width */
+			text-align: right;
+			margin-left: 10px; /* Space between the text and the bar */
+		}
+		
 		.consent-section {
 			margin-top: 40px;
 			font-size: 12px;
@@ -177,8 +189,8 @@
         <div class="content">
             <div class="section" id="about-me">
                 <h2>About Me</h2>
-				<p>I started learning C++ during the second semester of my psychology studies to build a stock trading systems and simulators using artificial neural networks. Around my third year, I transitioned to C# and the .NET ecosystem which led to my first job opportunities. </P>
-				<p>My exposure to legacy systems codebase during my early carreer led my to my shift towards radical simplisicity in development, as I realized that complexity and maintenance costs increase exponentially with poor quality and overly complicated code, making simplicity not just a preference but a necessity.</p>
+				<p>I started learning C++ during the second semester of my studies to build a stock trading systems and simulators using artificial neural networks. Around my third year, I transitioned to C# and the .NET ecosystem which led to my first job. </P>
+				<p>My exposure to legacy systems codebase during my early carreer led my to shift towards radical simplisicity in development, as I realized that complexity and maintenance costs increase exponentially with poor quality and overly complicated code, making simplicity not just a preference but a necessity.</p>
 				<p>In my free time I continue my pet project and maintain 10+ open source c# libraries which I'm the author of.</p>
             </div>
 			<div class="section" id="skills">
@@ -205,14 +217,14 @@
 					<span>7 years</span>
 				</div>
 				<div class="skill">
-					<div>SQL Server</div>
+					<div>SQL (SQL Server, SQLite, Postgress)</div>
 					<div class="bar">
 						<div class="progress" style="width: 50%;"></div>
 					</div>
 					<span>5 years</span>
 				</div>
 				<div class="skill">
-					<div>NoSQL</div>
+					<div>NoSQL (CosmosDB, Mongo)</div>
 					<div class="bar">
 						<div class="progress" style="width: 40%;"></div>
 					</div>
@@ -253,6 +265,9 @@
 					</div>
 					<span>6 years</span>
 				</div>
+				<div class="skill">
+					<div>Other: JS, VB, JSON, CSS, XML, XSTL, XSD, ASP.NET WebApi, WPF in MVVM, EF, WCF, ADO, Accord.NET, EmguCV, ML.NET, Redis, Cognitive Search, Service Bus, Azure DevOps, Azure ML, Windows Forms</div>
+				</div>
 			</div>
 			<div class="section" id="soft-skills">
 				<h2>Soft Skills</h2>
@@ -274,9 +289,9 @@
                 <p><strong>IGE+XAO - Internship (C++)</strong> - 2014</p>
                 <p>I was tasked with creating a T-SQL procedure to perform a database-wide undo operation. I accomplished this ahead of time by developing a C# generator for T-SQL, using the table schema as input.</p>
                 <p><strong>Transactor Poland - Software Developer (C#, WPF, WCF, SQL, EF)</strong> - 2014 to 2017</p>
-                <p>I started as the main developer on a business intelligence WPF application that aggregated data from multiple APIs. The project was successful and as I was informed provided great value for the customer for our low cost. After this I cooperated in Agile team where we developped, fixed, refactored and unit tested end to end insurance system, which required knowledge of (and improved my skills of) SQL procedures, WCF services, ASP.NET APIs, WPF, and Windows Forms applications. Other technologies I used in this role were xslsx, xsd, VB.NET, SQLite</p>
+                <p>I started as the main developer on a business intelligence WPF application that aggregated data from multiple APIs. The project was successful and as I was informed provided great value for the customer for our low cost. After this I cooperated in Agile team where we developped, fixed, refactored and unit tested end to end insurance lifetime management system, which required knowledge of (and improved my skills of) T-SQL procedures, WCF services, ASP.NET APIs, WPF and Windows Forms, xslsx, xsd, VB.NET, SQLite.</p>
                 <p><strong>Open GI - Software Developer (C#, SQL Server, WCF, Web API, WPF, .NET Core)</strong> - 2017 to 2019</p>
-                <p>Continuation of previous employment bu under different brand. More focus on newer technologies like ASP.NET Core instead of WPF, Rabbit Mq instead of WWF.</p>
+                <p>Continuation of previous employment under different brand. More focus on newer technologies like ASP.NET Core instead of WCF, Rabbit Mq instead of WWF.</p>
                 <p><strong>Jagiellonian University - Research on EEG Signal Classification (Python)</strong> - 2019 to 2020</p>
                 <p>During this time I participated in a grant-funded research study where I developed a Python classifier for monkey EEG brain activity and an Arduino-based tactile stimulator. We had a classification of monkey awake states with AUC above 0.8. </p>
                 <p><strong>Seville More Helory Polska - Senior Software Developer (C#, .NET Core, CosmosDB, Cognitive Search, Service Bus, Redis)</strong> - 2020 to Present</p>
