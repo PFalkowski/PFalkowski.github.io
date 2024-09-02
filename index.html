@@ -8,149 +8,169 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 40px auto;
-            background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
 
-        .sidebar {
-            width: 250px;
-            background-color: #0056b3;
-            color: #fff;
-            padding: 20px;
-            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
-        }
+/* Typography */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-        .sidebar h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+h2 {
+    font-size: 22px;
+    color: #0056b3;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
 
-        .sidebar p {
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
+p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
 
-        .contact-info {
-            margin-top: 30px;
-        }
+/* Layout Components */
+.sidebar {
+    width: 250px;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            word-wrap: break-word;
-        }
+.content {
+    flex: 1;
+    padding: 40px;
+}
 
-        .contact-item i {
-            margin-right: 10px;
-            font-size: 18px;
-        }
+/* Common Section Styles */
+.section {
+    margin-bottom: 40px;
+}
 
-        .contact-item span {
-            word-break: break-all;
-            max-width: 180px;
-        }
+.section:last-child {
+    margin-bottom: 0;
+}
 
-        .content {
-            flex: 1;
-            padding: 40px;
-        }
+/* Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
 
-        .content h2 {
-            font-size: 22px;
-            color: #0056b3;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
+li {
+    margin-bottom: 10px;
+}
 
-        .content p {
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
+/* Contact Info */
+.contact-info {
+    margin-top: 20px;
+}
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
 
-        li {
-            margin-bottom: 10px;
-        }
+.contact-item i {
+    margin-right: 10px;
+    font-size: 18px;
+}
 
-        .section {
-            margin-bottom: 40px;
-        }
+.contact-item span {
+    word-break: break-all;
+    max-width: 180px;
+}
 
-        .section:last-child {
-            margin-bottom: 0;
-        }
+/* Skills */
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
-        .skill {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
+.skill div {
+    flex: 1;
+}
 
-        .skill div {
-            flex: 1;
-        }
+.bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 10px;
+    height: 10px;
+    width: 70%;
+}
 
-        .bar {
-            background-color: #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 0 10px;
-            height: 10px;
-            width: 70%;
-        }
+.progress {
+    background-color: #0056b3;
+    height: 100%;
+    border-radius: 5px;
+}
 
-        .progress {
-            background-color: #0056b3;
-            height: 100%;
-            border-radius: 5px;
-        }
+.skill span {
+    min-width: 50px;
+    text-align: right;
+    flex-shrink: 0;
+}
 
-        .skill span {
-            min-width: 50px;
-            text-align: right;
-			flex-shrink: 0;
-        }
-		
-		.skill span:first-child {
-			min-width: 120px; /* Ensures the skill name has a consistent width */
-			text-align: left;
-		}
+.skill span:first-child {
+    min-width: 120px;
+    text-align: left;
+}
 
-		.skill span:last-child {
-			min-width: 70px; /* Ensures the years text has a consistent width */
-			text-align: right;
-			margin-left: 10px; /* Space between the text and the bar */
-		}
-		
-		.consent-section {
-			margin-top: 40px;
-			font-size: 12px;
-			color: #555;
-		}
+.skill span:last-child {
+    min-width: 70px;
+    text-align: right;
+    margin-left: 10px;
+}
 
-		.consent-section em {
-			font-style: italic;
-		}
+/* Conferences */
+#conferences {
+	margin-bottom: 40px;
+}
 
+#conferences h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#conferences ul {
+    margin-bottom: 20px;
+}
+
+#conferences li {
+    margin-bottom: 10px;
+}
+
+/* Consent Section */
+.consent-section {
+    margin-top: 40px;
+    font-size: 12px;
+    color: #555;
+}
+
+.consent-section em {
+    font-style: italic;
+}
     </style>
 </head>
 
@@ -310,6 +330,15 @@
                     <li>Polish - Native</li>
                     <li>English - C2</li>
                     <li>French - B2</li>
+                </ul>
+            </div>
+            <div class="section" id="conferences">
+                <h2>Conferences</h2>
+                <ul>
+                    <li>.NET DeveloperDays 2018</li>
+                    <li>MEGA Sekurak Hacking Party 2019</li>
+                    <li>AzureDay 2020</li>
+                    <li>MEGA Sekurak Hacking Party 2020 (in 2021)</li>
                 </ul>
             </div>
 			<div class="section" id="additional-info">
