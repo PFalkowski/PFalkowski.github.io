@@ -19,8 +19,9 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
@@ -46,16 +47,14 @@ p {
 
 /* Layout Components */
 .sidebar {
-    width: 250px;
     background-color: #0056b3;
     color: #fff;
     padding: 20px;
-    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .content {
-    flex: 1;
-    padding: 40px;
+    padding: 20px;
 }
 
 /* Common Section Styles */
@@ -105,19 +104,21 @@ li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .skill div {
-    flex: 1;
+    flex: 1 1 100%;
+    margin-bottom: 5px;
 }
 
 .bar {
     background-color: #ddd;
     border-radius: 5px;
     overflow: hidden;
-    margin: 0 10px;
     height: 10px;
-    width: 70%;
+    width: 100%;
+    margin: 5px 0;
 }
 
 .progress {
@@ -127,25 +128,13 @@ li {
 }
 
 .skill span {
-    min-width: 50px;
+    flex: 1 1 100%;
     text-align: right;
-    flex-shrink: 0;
-}
-
-.skill span:first-child {
-    min-width: 120px;
-    text-align: left;
-}
-
-.skill span:last-child {
-    min-width: 70px;
-    text-align: right;
-    margin-left: 10px;
 }
 
 /* Conferences */
 #conferences {
-	margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 #conferences h2 {
@@ -170,6 +159,51 @@ li {
 
 .consent-section em {
     font-style: italic;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+        flex: 1;
+        padding: 40px;
+    }
+
+    .skill {
+        flex-wrap: nowrap;
+    }
+
+    .skill div {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .bar {
+        margin: 0 10px;
+        width: 70%;
+    }
+
+    .skill span {
+        flex: 0 0 auto;
+    }
+
+    .skill span:first-child {
+        min-width: 120px;
+        text-align: left;
+    }
+
+    .skill span:last-child {
+        min-width: 70px;
+        margin-left: 10px;
+    }
 }
     </style>
 </head>
