@@ -86,7 +86,9 @@ li {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .contact-item i {
@@ -95,8 +97,18 @@ li {
 }
 
 .contact-item span {
-    word-break: break-all;
-    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.contact-item a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 100%;
 }
 
 /* Skills */
@@ -166,7 +178,27 @@ li {
     .container {
         flex-direction: row;
     }
+	
+    .contact-item {
+        white-space: normal; /* Allow wrapping */
+        overflow: visible; /* Show full content */
+    }
 
+    .contact-item span {
+        white-space: normal; /* Allow wrapping */
+        overflow: visible; /* Show full content */
+        text-overflow: clip; /* Remove ellipsis */
+        max-width: none; /* Remove max-width restriction */
+    }
+
+    .contact-item a {
+        white-space: normal; /* Allow wrapping */
+        overflow: visible; /* Show full content */
+        text-overflow: clip; /* Remove ellipsis */
+        display: inline; /* Allow normal flow */
+        max-width: none; /* Remove max-width restriction */
+    }
+	
     .sidebar {
         width: 250px;
         box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
@@ -243,7 +275,7 @@ li {
         <div class="content">
             <div class="section" id="about-me">
                 <h2>About Me</h2>
-				<p>I started learning C++ during the second semester of my studies to build a stock trading system and simulators using artificial neural networks. Around my third year, I transitioned to C# and the .NET ecosystem which led to my first job. </P>
+				<p>I started learning C++ to build a stock prediction system leveraging artificial neural networks.</P>
 				<p>My exposure to legacy systems codebase during my early career led me to shift towards radical simplicity in development, as I realized that complexity and maintenance costs increase exponentially with poor quality and overly complicated code, making simplicity not just a preference but a necessity.</p>
 				<p>In my free time I continue with my pet project and maintain 10+ open source c# libraries available at NuGet.org which I'm the author of.</p>
             </div>
@@ -254,7 +286,7 @@ li {
 					<div class="bar">
 						<div class="progress" style="width: 100%;"></div>
 					</div>
-					<span>10 years</span>
+					<span>11 years</span>
 				</div>
 				<div class="skill">
 					<div>Azure (Search, Service Bus, KV, Redis)</div>
@@ -350,7 +382,7 @@ li {
                 <p><strong>IGE+XAO - Internship (C++)</strong> - 2014</p>
                 <p>I was tasked with creating a T-SQL procedure to perform a database-wide undo operation. I accomplished this ahead of time by developing a C# generator for T-SQL, using the table schema as input.</p>
                 <p><strong>Transactor Poland - Software Developer (C#, WPF, WCF, SQL, EF)</strong> - 2014 to 2017</p>
-                <p>I started as the main developer on a business intelligence WPF application that aggregated data from multiple APIs. The project was successful and which, I was informed, provided great value to the customer at a low cost. After this I cooperated in an Agile team where we developed, fixed, refactored and unit tested end to end insurance lifetime management system, which required and improved my skills of T-SQL procedures, WCF services, ASP.NET APIs, WPF, Windows Forms, XSLT, XSD, VB.NET, SQLite.</p>
+                <p>I started as the main developer on a business intelligence C# WPF MVVM application that aggregated data from multiple APIs into . The project was successful and which, I was informed, provided great value to the customer at a low cost. After this I cooperated in an Agile team where we developed, fixed, refactored and unit tested end to end insurance lifetime management system, which required and improved my skills of T-SQL procedures, WCF services, ASP.NET APIs, WPF, Windows Forms, XSLT, XSD, VB.NET, SQLite.</p>
                 <p><strong>Open GI - Software Developer (C#, SQL Server, WCF, Web API, WPF, .NET Core)</strong> - 2017 to 2019</p>
                 <p>Continuation of previous employment under different brand. More focus on newer technologies like ASP.NET Core instead of WCF, RabbitMQ instead of WWF.</p>
                 <p><strong>Jagiellonian University - Research on EEG Signal Classification (Python)</strong> - 2019 to 2020</p>
@@ -382,6 +414,10 @@ li {
 					<li>Knowledge in the field of psychology</li>
 					<li>Hobbies: board games, running, gym, physics, own projects</li>
 				</ul>
+			</div>
+			<div class="github-activity">
+				<h2>My GitHub Activity</h2>
+				<img src="http://ghchart.rshah.org/PFalkowski" alt="Piotr Falkowski's GitHub activity chart" />
 			</div>
 			<div class="consent-section">
 				<p><em>I hereby agree for processing the following personal information strictly for the purposes of recruitment processes under Art. 23ust 1 pkt 1 of the Personal Data Protection Act as of 29 August 1997, consolidated text: Journal of Laws 2016, item 922 as amended and under Art. 6 ust.1 lit. a of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such GDPR (Dz. U. UE. L. z 2016 r. Nr 119.)</em></p>
