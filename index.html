@@ -1,429 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Piotr Falkowski — CV</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Piotr Falkowski</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-/* Global Styles */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+		<!--
+			This repository used to serve a second, hand-maintained copy of the CV.
+			It had drifted about two years behind the real one, and search engines
+			had two competing versions of the same document to choose from.
 
-.container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
+			There is now one CV, built from PFalkowski/cv and published at /cv/.
+			This page exists only to send people there. Do not add content here.
+		-->
+		<link rel="canonical" href="https://pfalkowski.github.io/cv/" />
+		<meta name="robots" content="noindex, follow" />
+		<meta http-equiv="refresh" content="0; url=/cv/" />
 
-/* Typography */
-h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 22px;
-    color: #0056b3;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-p {
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Layout Components */
-.sidebar {
-    background-color: #0056b3;
-    color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.content {
-    padding: 20px;
-}
-
-/* Common Section Styles */
-.section {
-    margin-bottom: 40px;
-}
-
-.section:last-child {
-    margin-bottom: 0;
-}
-
-/* Lists */
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-/* Contact Info */
-.contact-info {
-    margin-top: 20px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.contact-item i {
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-.contact-item span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
-
-.contact-item a {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    max-width: 100%;
-}
-
-/* Skills */
-.skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-}
-
-.skill div {
-    flex: 1 1 100%;
-    margin-bottom: 5px;
-}
-
-.bar {
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 10px;
-    width: 100%;
-    margin: 5px 0;
-}
-
-.progress {
-    background-color: #0056b3;
-    height: 100%;
-    border-radius: 5px;
-}
-
-.skill span {
-    flex: 1 1 100%;
-    text-align: right;
-}
-
-/* Conferences */
-#conferences {
-    margin-bottom: 40px;
-}
-
-#conferences h2 {
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-#conferences ul {
-    margin-bottom: 20px;
-}
-
-#conferences li {
-    margin-bottom: 10px;
-}
-
-/* Consent Section */
-.consent-section {
-    margin-top: 40px;
-    font-size: 12px;
-    color: #555;
-}
-
-.consent-section em {
-    font-style: italic;
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-    }
-	
-    .contact-item {
-        white-space: normal; /* Allow wrapping */
-        overflow: visible; /* Show full content */
-    }
-
-    .contact-item span {
-        white-space: normal; /* Allow wrapping */
-        overflow: visible; /* Show full content */
-        text-overflow: clip; /* Remove ellipsis */
-        max-width: none; /* Remove max-width restriction */
-    }
-
-    .contact-item a {
-        white-space: normal; /* Allow wrapping */
-        overflow: visible; /* Show full content */
-        text-overflow: clip; /* Remove ellipsis */
-        display: inline; /* Allow normal flow */
-        max-width: none; /* Remove max-width restriction */
-    }
-	
-    .sidebar {
-        width: 250px;
-        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .content {
-        flex: 1;
-        padding: 40px;
-    }
-
-    .skill {
-        flex-wrap: nowrap;
-    }
-
-    .skill div {
-        flex: 1;
-        margin-bottom: 0;
-    }
-
-    .bar {
-        margin: 0 10px;
-        width: 70%;
-    }
-
-    .skill span {
-        flex: 0 0 auto;
-    }
-
-    .skill span:first-child {
-        min-width: 120px;
-        text-align: left;
-    }
-
-    .skill span:last-child {
-        min-width: 70px;
-        margin-left: 10px;
-    }
-}
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <div class="sidebar">
-          <h1>Piotr Falkowski</h1>
-            <p>Senior Backend Software Developer with 10+ years of experience.</p>
-            <div class="contact-info">
-                <div class="contact-item">
-					<i class="fas fa-phone"></i>
-					<img src="resources/images/phone.png" alt="Phone Number" class="contact-img">
-				</div>
-                <div class="contact-item">
-					<i class="fas fa-envelope"></i>
-					<img src="resources/images/email.png" alt="Email Address" class="contact-img">
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-cube"></i>
-                    <span><a href="https://nuget.org/profiles/PFalkowski" target="_blank" style="color: #fff; text-decoration: none;">nuget.org/profiles/PFalkowski</a></span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <span><a href="https://github.com/PFalkowski" target="_blank" style="color: #fff; text-decoration: none;">github.com/PFalkowski</a></span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-stack-overflow"></i>
-                    <span><a href="https://stackoverflow.com/users/3922292" target="_blank" style="color: #fff; text-decoration: none;">stackoverflow.com/users/3922292</a></span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <span><a href="https://pl.linkedin.com/in/piotrfalkowski" target="_blank" style="color: #fff; text-decoration: none;">pl.linkedin.com/in/piotrfalkowski</a></span>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="section" id="about-me">
-                <h2>About Me</h2>
-				<p>I started learning C++ to build a stock prediction system leveraging artificial neural networks.</P>
-				<p>My exposure to legacy systems codebase during my early career led me to shift towards radical simplicity in development, as I realized that complexity and maintenance costs increase exponentially with poor quality and overly complicated code, making simplicity not just a preference but a necessity.</p>
-				<p>In my free time I continue with my pet project and maintain 10+ open source c# libraries available at NuGet.org which I'm the author of.</p>
-            </div>
-			<div class="section" id="skills">
-				<h2>Technical Skills</h2>
-				<div class="skill">
-					<div>C#</div>
-					<div class="bar">
-						<div class="progress" style="width: 100%;"></div>
-					</div>
-					<span>11 years</span>
-				</div>
-				<div class="skill">
-					<div>Azure (Search, Service Bus, KV, Redis)</div>
-					<div class="bar">
-						<div class="progress" style="width: 70%;"></div>
-					</div>
-					<span>7 years</span>
-				</div>
-				<div class="skill">
-					<div>ASP.NET</div>
-					<div class="bar">
-						<div class="progress" style="width: 50%;"></div>
-					</div>
-					<span>5 years</span>
-				</div>
-				<div class="skill">
-					<div>SQL (SQL Server, SQLite, Postgress)</div>
-					<div class="bar">
-						<div class="progress" style="width: 50%;"></div>
-					</div>
-					<span>5 years</span>
-				</div>
-				<div class="skill">
-					<div>Entity Framework</div>
-					<div class="bar">
-						<div class="progress" style="width: 40%;"></div>
-					</div>
-					<span>4 years</span>
-				</div>
-				<div class="skill">
-					<div>C++</div>
-					<div class="bar">
-						<div class="progress" style="width: 40%;"></div>
-					</div>
-					<span>4 years</span>
-				</div>
-				<div class="skill">
-					<div>NoSQL (CosmosDB, Mongo)</div>
-					<div class="bar">
-						<div class="progress" style="width: 40%;"></div>
-					</div>
-					<span>4 years</span>
-				</div>
-				<div class="skill">
-					<div>WPF in MVVM</div>
-					<div class="bar">
-						<div class="progress" style="width: 40%;"></div>
-					</div>
-					<span>4 years</span>
-				</div>
-				<div class="skill">
-					<div>Python</div>
-					<div class="bar">
-						<div class="progress" style="width: 20%;"></div>
-					</div>
-					<span>2 years</span>
-				</div>
-				<div class="skill">
-					<div>Ruby</div>
-					<div class="bar">
-						<div class="progress" style="width: 10%;"></div>
-					</div>
-					<span>1 year</span>
-				</div>
-				<div class="skill">
-					<div>ML (ML.NET, Accord.NET, EmguCV, Keras)</div>
-					<div class="bar">
-						<div class="progress" style="width: 40%;"></div>
-					</div>
-					<span>4 years</span>
-				</div>
-				<div class="skill">
-					<div>Other: PowerShell, XSTL, XSD, WCF, ADO, Windows Forms, Azure DevOps a.k.a. VSTS, Trello, Graphana, Postman, Swagger</div>
-				</div>
-			</div>
-			<div class="section" id="soft-skills">
-				<h2>Soft Skills</h2>
-				<ul>
-					<li>Autonomy</li>
-					<li>Persistence</li>
-					<li>Creativity</li>
-					<li>Focus</li>
-					<li>Integrity</li>
-				</ul>
-			</div>
-            <div class="section" id="education">
-                <h2>Formal Education</h2>
-                <p><strong>Polish/French Bilingual High School</strong> - 2004 to 2008</p>
-                <p><strong>Jagiellonian University - Psychology - Master</strong> - 2009 to 2016</p>
-            </div>
-            <div class="section" id="work-experience">
-                <h2>Work Experience</h2>
-                <p><strong>IGE+XAO - Internship (C++)</strong> - 2014</p>
-                <p>I was tasked with creating a T-SQL procedure to perform a database-wide undo operation. I accomplished this ahead of time by developing a C# generator for T-SQL, using the table schema as input.</p>
-                <p><strong>Transactor Poland - Software Developer (C#, WPF, WCF, SQL, EF)</strong> - 2014 to 2017</p>
-                <p>I started as the main developer on a business intelligence C# WPF MVVM application that aggregated data from multiple APIs into . The project was successful and which, I was informed, provided great value to the customer at a low cost. After this I cooperated in an Agile team where we developed, fixed, refactored and unit tested end to end insurance lifetime management system, which required and improved my skills of T-SQL procedures, WCF services, ASP.NET APIs, WPF, Windows Forms, XSLT, XSD, VB.NET, SQLite.</p>
-                <p><strong>Open GI - Software Developer (C#, SQL Server, WCF, Web API, WPF, .NET Core)</strong> - 2017 to 2019</p>
-                <p>Continuation of previous employment under different brand. More focus on newer technologies like ASP.NET Core instead of WCF, RabbitMQ instead of WWF.</p>
-                <p><strong>Jagiellonian University - Research on EEG Signal Classification (Python)</strong> - 2019 to 2020</p>
-                <p>During this time I participated in a grant-funded research study where I developed a Python classifier for monkey EEG brain activity and an Arduino-based tactile stimulator. We had a classification of monkey awake states with AUC above 0.8. </p>
-                <p><strong>Seville More Helory Polska - Senior Software Developer (C#, .NET Core, CosmosDB, Cognitive Search, Service Bus, Redis)</strong> - 2020 to Present</p>
-                <p>Senior developer on client focused projects related to document management, approvals, ethics and compliance, developing cloud-based solutions using .NET Core, CosmosDB, and other modern technologies.</p>
-            </div>
-            <div class="section" id="languages">
-                <h2>Languages</h2>
-                <ul>
-                    <li>Polish - Native</li>
-                    <li>English - C2</li>
-                    <li>French - B2</li>
-                </ul>
-            </div>
-            <div class="section" id="conferences">
-                <h2>Conferences</h2>
-                <ul>
-                    <li>.NET DeveloperDays 2018</li>
-                    <li>MEGA Sekurak Hacking Party 2019</li>
-                    <li>AzureDay 2020</li>
-                    <li>MEGA Sekurak Hacking Party 2020 (in 2021)</li>
-                </ul>
-            </div>
-			<div class="section" id="additional-info">
-				<h2>Additional Information</h2>
-				<ul>
-					<li>Category B driving license.</li>
-					<li>Knowledge in the field of psychology</li>
-					<li>Hobbies: board games, running, gym, physics, own projects</li>
-				</ul>
-			</div>
-			<div class="github-activity">
-				<h2>My GitHub Activity</h2>
-				<img src="http://ghchart.rshah.org/PFalkowski" alt="Piotr Falkowski's GitHub activity chart" />
-			</div>
-			<div class="consent-section">
-				<p><em>I hereby agree for processing the following personal information strictly for the purposes of recruitment processes under Art. 23ust 1 pkt 1 of the Personal Data Protection Act as of 29 August 1997, consolidated text: Journal of Laws 2016, item 922 as amended and under Art. 6 ust.1 lit. a of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such GDPR (Dz. U. UE. L. z 2016 r. Nr 119.)</em></p>
-			</div>
-        </div>
-    </div>
-</body>
-
+		<style>
+			:root {
+				color-scheme: light dark;
+			}
+			body {
+				margin: 0;
+				min-height: 100vh;
+				display: grid;
+				place-items: center;
+				font-family:
+					-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+					sans-serif;
+				background: #f0f2f5;
+				color: #2b2f36;
+			}
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: #0c0f14;
+					color: #e3e8ef;
+				}
+			}
+			main {
+				text-align: center;
+				padding: 2rem;
+			}
+			a {
+				color: #0056b3;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					color: #7cb8ff;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<p>The CV has moved.</p>
+			<p><a href="/cv/">pfalkowski.github.io/cv</a></p>
+		</main>
+		<script>
+			// Replace rather than assign, so Back does not bounce off this page.
+			location.replace('/cv/');
+		</script>
+	</body>
 </html>
